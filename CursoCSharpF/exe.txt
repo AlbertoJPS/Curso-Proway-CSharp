@@ -1,0 +1,12 @@
+1-Criar duas variaveis para armazenar numeros inteiros
+2-Somar os dois valores e armazenar em uma terceira variavel
+3-Mostrar na tela
+
+1- Ler dois numeros digitados pelo usuario
+2- Realizar a soma dos dois numeros
+3- Imprimir o resultado
+
+1- Criar um novo metodo para multiplicar os valores lidos
+2- Criar um novo metodo para subtrair os valores lidos
+3- Criar um novo metodo para dividir os valores lidos
+4- Criar um novo metodo para calcular o resto da divisao  (mod)
