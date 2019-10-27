@@ -4,6 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Bebida.ConsoleApp.Class;
+
+            // ctrl+k+u desconenta área selecionada
+            // ctrl+k+c conenta área selecionada
+            // ctrl+shift+b compilar,e verificar erros
+
+            //código extra, OrderBy e OrderBy invertido
+            //costumerList = costumerList.OrderBy(i => i).ToList();
+            //costumerList = costumerList.OrderByDescending(i => i).ToList();
+
+
+            //código extra, começando por uma letra específica
+            //costumerList = costumerList.OrderBy(i => i.StartsWith("B").ToList();
+
 namespace Bebida.ConsoleApp
 {
     class Program
@@ -14,50 +28,44 @@ namespace Bebida.ConsoleApp
             Console.WriteLine("          Welcome to the store!");
             Console.WriteLine("");
 
-            //Method Costumer Registration
-            List<string> costumerList = new List<string>();
+            Data data = new Data();
 
             for(int i = 0; i < 3; i++)
             {
-                string completeName = CustomerRegistration();
-                costumerList.Add(completeName);
+                Person p = CustomerRegistration();
+                data.ToSave(p);
+                
             }
 
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("");
 
-            //código extra, OrderBy e OrderBy invertido
-            //costumerList = costumerList.OrderBy(i => i).ToList();
-            //costumerList = costumerList.OrderByDescending(i => i).ToList();
+            List<Person> costumerList = data.ReadAll();
 
-
-            //código extra, começando por uma letra específica
-            //costumerList = costumerList.OrderBy(i => i.StartsWith("B").ToList();
-
-            foreach (string iten in costumerList)
+            foreach (Person iten in costumerList)
             {
-                Console.WriteLine($"- {iten};");
+                Console.WriteLine($"- {iten.Name} {iten.LastName};");
             }
+            Console.WriteLine("");
+            Console.WriteLine($"See you later , thanks for choosing.");
 
-                Console.WriteLine("");
-                Console.WriteLine($"See you later , thanks for choosing.");
-
-                Console.ReadKey();
-
+            Console.ReadKey();
         }
 
-        static string CustomerRegistration()
+        static Person CustomerRegistration()
         {
+            Person person1 = new Person();
+
+            Console.WriteLine(person1.Name);
+            Console.WriteLine(person1.LastName);
+
             Console.Write("Enter your name: ");
-            string name = Console.ReadLine();
+            person1.Name = Console.ReadLine();
             Console.Write("And your last name: ");
-            string lastName = Console.ReadLine();
+            person1.LastName = Console.ReadLine();
             Console.WriteLine("");
 
-
-            string completeName1 = $"{name} {lastName}";
-
-            return completeName1;
+            return person1;
         }
     }
 }
