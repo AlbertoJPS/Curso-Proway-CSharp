@@ -1,15 +1,17 @@
-﻿using System;
+﻿using DataLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bebida.ConsoleApp.Class
+namespace DataLibrary.DAO
 {
+
     public class Data
     {
-            string path = @"P:\Backup ProWay\C#\Curso-Proway-CSharp\Bebidas\People.txt";
+        private readonly string path = @"P:\Backup ProWay\C#\Curso-Proway-CSharp\Bebidas\People.txt";
 
         #region Method
         public void ToSave(Person person)
@@ -33,6 +35,7 @@ namespace Bebida.ConsoleApp.Class
                 Person person = new Person();
                 person.Name = breakLine[0];
                 person.LastName = breakLine[1];
+                person.CPF = breakLine[2];
 
                 list.Add(person);
             }

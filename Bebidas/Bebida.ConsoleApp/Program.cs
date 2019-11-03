@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 using Bebida.ConsoleApp.Class;
 
-            // ctrl+k+u desconenta área selecionada
-            // ctrl+k+c conenta área selecionada
-            // ctrl+shift+b compilar,e verificar erros
+            //ctrl+k+u desconenta área selecionada
+            //ctrl+k+c conenta área selecionada
+            //ctrl+shift+b compilar,e verificar erros
 
             //código extra, OrderBy e OrderBy invertido
             //costumerList = costumerList.OrderBy(i => i).ToList();
             //costumerList = costumerList.OrderByDescending(i => i).ToList();
-
 
             //código extra, começando por uma letra específica
             //costumerList = costumerList.OrderBy(i => i.StartsWith("B").ToList();
