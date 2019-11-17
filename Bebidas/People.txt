@@ -1,1 +1,9 @@
 Alberto;Santos;123231241234
+dfsdf;sdfsdf;sdf
+;;
+Alberto;Santos;12314
+Sou;Lindo;100%
+Sou;Santo;123123123
+Alberto;Santo;234234
+test;test ;1632
+Só;Sucesso;100000
